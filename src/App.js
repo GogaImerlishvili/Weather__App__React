@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Search from "./components/search/Search";
+import Forecast from "./components/forecast/Forecast";
 import CurrentWeather from "./components/current-weather/Current-weather";
 import { WEATHER_API_URL, WEATHER_API_KEY } from "./Api";
 
@@ -35,6 +36,7 @@ function App() {
       <div className="container">
         <Search onSearchChange={handleOnSearchChange} />
         {currentWeather && <CurrentWeather data={currentWeather} />}
+        {forecast && <Forecast data={forecast} />}
       </div>
     </>
   );
